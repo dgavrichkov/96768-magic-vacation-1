@@ -97,6 +97,23 @@
     margin-left: -2.5rem;
     font-size: 3rem;
   }
+
+  .fancy-words__item {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-top: 5px;
+    margin-top: -5px;
+  }
+  .fancy-words__item span {
+    display: inline-block;
+    vertical-align: top;
+    will-change: transform;
+    transform: translate3d(0, calc(3rem + 20px), 0);
+  }
+  &.is-active .fancy-words__item span {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .slider__item-text {

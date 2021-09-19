@@ -8,7 +8,7 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
-import TextSplitter from './modules/textSplitter';
+import animationControl from './modules/animationsControl';
 
 // init modules
 mobileHeight();
@@ -19,21 +19,10 @@ chat();
 result();
 form();
 social();
-
+animationControl();
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
-const fancyWords = function () {
-  const nodes = document.querySelectorAll(`.fancy-words`);
-  const options = {};
-  nodes.forEach((node) => {
-    const fancyObject = new TextSplitter(node, options);
-    return fancyObject;
-  });
-};
-
 window.addEventListener(`load`, () => {
   document.body.classList.add(`is-loaded`);
-
-  fancyWords();
 });
